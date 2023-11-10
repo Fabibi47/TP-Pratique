@@ -1,0 +1,38 @@
+{{define "promo"}}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/style/Promo.css">
+    </head>
+    <body>
+        <h1>Nom de la Promo</h1>
+        <div class="info">
+            <p><strong>{{.Title}}</strong></p>
+            <p><strong>Filière:</strong> {{.Filiere}}</p>
+            <p><strong>Niveau:</strong> {{.Level}}</p>
+            <p><strong>Nombre d'élèves:</strong> {{.Nb}}</p>
+        </div>
+        <h1>Élèves de la promo</h1>
+        {{range .Students}}
+        {{if eq .Sexe 1}}
+        <div class="student">
+            <p>{{.Name}}</p>
+            <p>{{.Age}}</p>
+            <img src="/static/imgs/homme.png" alt="Homme" width="20%">
+        </div>
+        {{else}}
+        <div class="student">
+            <p>{{.Name}}</p>
+            <p>{{.Age}}</p>
+            <img src="/static/imgs/femme.png" alt="Femme" width="20%">
+        </div>
+        {{end}}
+        {{end}}
+    </body>
+</html>
+{{end}}
