@@ -13,3 +13,8 @@
 .Info{
     padding: 3px;
 }
+
+.studentinfo {
+    display: flex;
+    flex-direction: column;
+}

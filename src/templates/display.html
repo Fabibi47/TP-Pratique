@@ -1,0 +1,36 @@
+{{define "display"}}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/style/display.css">
+    </head>
+    <body>
+        <div class="info">
+            <fieldset>
+                <legend><strong>ÉLÈVE</strong></legend>
+                <section>
+                    <h4>NOM</h4>
+                    <p>{{.FirstName}} {{.LastName}}</p>
+                </section>
+                <section>
+                    <h4>DATE DE NAISSANCE</h4>
+                    <p>{{.BirthDate}}</p>
+                </section>
+                <section>
+                    <h4>SEXE</h4>
+                    <p>{{.Sexe}}</p>
+                </section>
+                <section>
+                    <h4>PROMO</h4>
+                    <p>{{.Promo}}</p>
+                </section>
+            </fieldset>
+        </div>
+    </body>
+</html>
+{{end}}

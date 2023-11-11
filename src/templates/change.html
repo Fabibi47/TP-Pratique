@@ -1,0 +1,23 @@
+{{define "change"}}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Change</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/style/change.css">
+    </head>
+    <body>
+        <div>
+            {{if eq .Even true}}
+            <p>Le nombre est pair</p>
+            {{else}}
+            <p>Le nombre est impair</p>
+            {{end}}
+            <p> {{.Number}} </p>
+        </div>
+    </body>
+</html>
+{{end}}

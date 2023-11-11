@@ -1,0 +1,19 @@
+body {
+    background-color: #808080;
+    height: 98vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+fieldset {
+    background-color: rgb(190, 179, 164);
+    width: 20vw;
+    height: fit-content;
+    border-radius: 2%;
+}
+
+legend {
+    margin: auto;
+    font-size: xx-large;
+}

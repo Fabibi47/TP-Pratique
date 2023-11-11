@@ -1,0 +1,61 @@
+{{define "form"}}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Inscription</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/style/form.css">
+    </head>
+    <body>
+        <form action="/user/treatment" method="post">
+            <div>
+                <label for="firstname">Prénom</label>
+                <input type="text" name="firstname" id="firstname" placeholder="David" required>
+            </div>
+            <div>
+                <label for="lastname">Nom</label>
+                <input type="text" name="lastname" id="lastname" placeholder="Fils de Momone" required>
+            </div>
+            <div>
+                <label for="birth">Date de naissance</label>
+                <input type="date" name="birth" id="birth" required>
+            </div>
+            <div>
+                <label for="promo">Promotion</label>
+                <select name="promo" id="promo-select" required>
+                    <option value="">--Choississez une promo--</option>
+                    <option value="B1">B1</option>
+                    <option value="B2">B2</option>
+                    <option value="B3">B3</option>
+                    <option value="M1">M1</option>
+                    <option value="M2">M2</option>
+                    <option value="Mentor">Mentor</option>
+                </select>
+            </div>
+            <fieldset>
+                <legend>Vous êtes :</legend>
+                <section>
+                    <input type="radio" name="sexe" id="homme" value="Homme" required>
+                    <label for="homme">un homme</label>
+                </section>
+                <section>
+                    <input type="radio" name="sexe" id="femme" value="Hemme" required>
+                    <label for="femme">une femme</label>
+                </section>
+                <section>
+                    <input type="radio" name="sexe" id="autres" value="Autres" required>
+                    <label for="autres">un handicapé mental</label>
+                </section>
+                <section>
+                    <input type="radio" name="sexe" id="batman" value="JUSTICE" required>
+                    <label for="batman">Batman</label>
+                </section>
+            </fieldset>
+            <button type="submit">S'inscrire</button>
+        </form>
+    </body>
+</html>
+{{end}}

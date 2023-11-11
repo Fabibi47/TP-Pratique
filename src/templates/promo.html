@@ -19,19 +19,21 @@
         </div>
         <h1>Élèves de la promo</h1>
         {{range .Students}}
-        {{if eq .Sexe 1}}
         <div class="student">
-            <p>{{.Name}}</p>
-            <p>{{.Age}}</p>
-            <img src="/static/imgs/homme.png" alt="Homme" width="20%">
+            <div class="studentinfo">
+                <p>{{.Name}}</p>
+                <p>{{.Age}}</p>
+            </div>
+            {{if eq .Sexe 1}}
+            <img src="/static/imgs/homme.png" alt="Homme" width="25%">
+            {{else if eq .Sexe 0}}
+            <img src="/static/imgs/femme.png" alt="Femme" width="27%">
+            {{else if eq .Sexe -1}}
+            <img src="/static/imgs/golmon.jpg" alt="PD" width="25%">
+            {{else}}
+            <img src="/static/imgs/nico.png" alt="Batman" width="25%">
+            {{end}}
         </div>
-        {{else}}
-        <div class="student">
-            <p>{{.Name}}</p>
-            <p>{{.Age}}</p>
-            <img src="/static/imgs/femme.png" alt="Femme" width="20%">
-        </div>
-        {{end}}
         {{end}}
     </body>
 </html>
